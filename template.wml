@@ -17,7 +17,7 @@ my $nav_bar = Shlomif::NavMenu->new(
 my $rendered_results = 
         $nav_bar->render(
             no_ie => 'true',
-            styles => 
+            (0 ? (styles =>
             {
                 'bar' => 'nav',
                 'level0' => 'navbarmain',
@@ -26,7 +26,7 @@ my $rendered_results =
                 'level3' => "navbarnested",
                 'level4' => "navbarnested",
                 'list' => "navbarmain",
-            },
+            }): ()),
             );
 
 use vars qw($nav_links);
@@ -51,7 +51,9 @@ $nav_html = $rendered_results->{html};
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 <head>
 <title>{#SUBJECT_LOC#}</title>
-<link rel="stylesheet" href="$(ROOT)/style.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="$(ROOT)/sinorca-screen.css" media="screen" title="Sinorca (screen)" />
+<link rel="stylesheet" type="text/css" href="$(ROOT)/sinorca-print.css" media="print" />
+
 <:{
 use CGI qw();
 
@@ -99,15 +101,32 @@ http://developer.berlios.de/forum/forum.php?forum_id=2341
 
 <define-tag nothing></define-tag>
 
-<table summary="Layout Table: The first cell contains a navigation bar, the second the main page" border="0" width="99%">
-<tr>
-<td valign="top" class="navbar" style="width:20%">
+    <!-- For non-visual user agents: -->
+      <div id="top"><a href="#main-copy" class="doNotDisplay doNotPrint">Skip to main content.</a></div>
 
-<a href="$(ROOT)" class="nobg"><img 
-   src="$(ROOT)/images/glider-israel.png" /></a>
+    <!-- ##### Header ##### -->
 
-<:{ print join("\n", @$nav_html); }:>
+    <div id="header">
+      <div class="midHeader">
+        <h1 class="headerTitle">{#SUBJECT_LOC#}</h1>
+      </div>
+    </div>
 
+    <!-- ##### Side Bar ##### -->
+
+    <div id="side-bar">
+      <div>
+<a href="$(ROOT)" class="nobg" title="Hackers-IL Logo"><img 
+   src="$(ROOT)/images/glider-israel.png" style="border:0"
+   alt="The Hackers-IL Emblem" 
+   /></a>
+      </div>
+
+      <div>
+<:{ print join("\n", @$nav_html); }:>        
+      </div>
+
+      <div>
 <define-tag validhtml>
 <p>
 <a href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=70"><img 
@@ -133,19 +152,32 @@ http://developer.berlios.de/forum/forum.php?forum_id=2341
 # <ifeq "$(FILENAME)" "index.html" "<validhtml />" "" />
 
 <validhtml />
+      
+      </div>
+    </div>
 
-</td>
-<td valign="top" class="main">
-<h1>{#SUBJECT_LOC#}</h1>
+    <!-- ##### Main Copy ##### -->
+
+    <div id="main-copy">
+
+
 {#BODY#}
 
-</td>
-</tr>
-</table>
-<hr />
-<p>
-<b>Webmaster:</b> <a href="mailto:shlomif@iglu.org.il">Shlomi Fish - shlomif@iglu.org.il</a>
-</p>
+</div>
+    <!-- ##### Footer ##### -->
+
+    <div id="footer">
+      <div class="left">
+        <b>Webmaster:</b> <a href="mailto:shlomif@iglu.org.il">Shlomi Fish - shlomif@iglu.org.il</a>
+      </div>
+
+      <br class="doNotDisplay doNotPrint" />
+
+      <div class="right">
+        This design is (almost) public domain.<br />
+        <a href="./index.html" class="doNotPrint">This is a footer link</a>
+      </div>
+    </div>
 
 </body>
 </html>

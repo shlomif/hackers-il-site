@@ -76,7 +76,7 @@ acronym, .titleTip {
 }
 
 .headerTitle {
-  font-size: 337%;
+  font-size: 250%;
   font-weight: normal;
   margin: 0 0 0 4mm;
   padding: 0.25ex 0;
@@ -144,8 +144,12 @@ acronym, .titleTip {
   background-color: transparent;
   text-decoration: none;
   margin: 0;
-  padding: 0.75em 1ex 0.75em 5mm;
+}
+
+#side-bar a, #side-bar b, .thisPage 
+{
   display: block;
+  padding: 0.75em 1ex 0.75em 5mm;  
 }
 
 .thisPage {
@@ -157,9 +161,12 @@ acronym, .titleTip {
 }
 
 #side-bar a:hover {
-  color: white;
-  background-color: rgb(100,135,220);
+  color: white;  
   text-decoration: none;
+}
+
+#side-bar a:hover, #side-bar b:hover {
+    background-color: rgb(100,135,220);
 }
 
 .sideBarText {
@@ -200,6 +207,7 @@ acronym, .titleTip {
   border-left: 1px solid rgb(153,153,153);
 }
 
+
 #main-copy p {
   margin: 1em 1ex 2em 1ex;
   padding: 0;
@@ -213,6 +221,11 @@ acronym, .titleTip {
 
 #main-copy a:hover {
   text-decoration: none;
+}
+
+#main-copy a b {
+    font-size : 120%;
+    color: rgb(128,0,0);
 }
 
 #main-copy h1 {
@@ -287,3 +300,9 @@ dd {
 #footer a:hover {
   text-decoration: none;
 }
+
+a.nobg:hover 
+{ 
+    background-color : transparent; 
+}
+
