@@ -117,7 +117,7 @@ http://developer.berlios.de/forum/forum.php?forum_id=2341
     <div id="side-bar">
       <div>
 <a href="$(ROOT)" class="nobg" title="Hackers-IL Logo"><img 
-   src="$(ROOT)/images/glider-israel.png" style="border:0"
+   src="$(ROOT)/images/glider-israel.png" style="border:0;padding-right:0.5em;"
    alt="The Hackers-IL Emblem" 
    /></a>
       </div>

@@ -11,13 +11,8 @@ body {
   color: black;
   background-color: rgb(240,240,240);
   font-family: verdana, helvetica, arial, sans-serif;
-  font-size: 71%;  /* Enables font size scaling in MSIE */
   margin: 0;
   padding: 0;
-}
-
-html > body {
-  font-size: 8.5pt;
 }
 
 acronym, .titleTip {
@@ -76,7 +71,7 @@ acronym, .titleTip {
 }
 
 .headerTitle {
-  font-size: 250%;
+  font-size: 150%;
   font-weight: normal;
   margin: 0 0 0 4mm;
   padding: 0.25ex 0;

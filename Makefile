@@ -64,12 +64,9 @@ $(PODS_DESTS_HTMLS) :: $(TARGET)/%.html : src/%.pod
 # $(PACKAGES_DESTS) :: $(PACKAGES_DIR)/% : ./temp/lk-module-compiler-final/%
 # 	cp -f $< $@
 
-upload: upload_berlios
-
-upload_berlios: all
-	(cd dest && $(RSYNC) -r * shlomif@shell.berlios.de:/home/groups/perl-begin/htdocs/)
+upload: upload_iglu
 
 upload_iglu: all
-	(cd dest && $(RSYNC) -r * shlomif@iglu.org.il:/iglu/html/shlomif/Perl-Begin/)
+	(cd dest && $(RSYNC) -r * shlomif@iglu.org.il:/iglu/Hackers-IL/html)
 
-.PHONY: 
+.PHONY:
