@@ -30,7 +30,7 @@ WML_FLAGS += --passoption=2,-X --passoption=3,-I../lib/ --passoption=7,"-S imgsi
 
 RSYNC = rsync --progress --verbose --rsh=ssh 
 
-LIBRARY_FILES = template.wml
+LIBRARY_FILES = template.wml lib/MyNavData.pm
 
 # This is a file that does not change or is timestamped from invocation
 # to inovcation of this makefile. Useful for synchronizing uploads.

@@ -10,7 +10,7 @@ $filename = "/$filename";
 
 my $nav_bar = Shlomif::NavMenu->new(
     'path_info' => $filename,
-    'current_host' => "berlios",
+    'current_host' => "hackers",
     MyNavData::get_params(),
     );
 

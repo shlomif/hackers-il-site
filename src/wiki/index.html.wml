@@ -1,0 +1,11 @@
+#include '../template.wml'
+
+<subject "The Hackers-IL Wiki" />
+
+<p>
+We have <a href="/mediawiki/index.php/">Wiki</a> where most of the site's
+action takes place. A Wiki is a portion of the site that is fully editable
+by using a web-browser. Please make sure you register and login before you
+fill in any content. Most of the pages on the Wiki are world editable.
+</p>
+

@@ -25,8 +25,8 @@ my $tree_contents =
             'url' => "wiki/",
         },
         {
-            'value' => "Mailing List",
-            'url' => "mailing-list/",
+            'value' => "Mailing Lists",
+            'url' => "mailing-lists/",
         },
     ],
 };
