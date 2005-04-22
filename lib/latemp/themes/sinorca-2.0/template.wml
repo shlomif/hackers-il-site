@@ -40,15 +40,14 @@
 
     <div id="footer">
       <div class="left">
-        <b>Webmaster:</b> <a href="mailto:shlomif@iglu.org.il">Shlomi Fish - shlomif@iglu.org.il</a>
+      <latemp_webmaster_text />
+
       </div>
 
       <br class="doNotDisplay doNotPrint" />
 
       <div class="right">
-        This design is (almost) public domain.<br />
-        Based on <a href="http://www.oswd.org/viewdesign.phtml?id=1165&referer=%2Fsearch.php%3Fsearchstring%3Dsinorca%26tab%3Ddescription">the Sinorca Design</a><br />
-        <a href="./index.html" class="doNotPrint">This is a footer link</a>
+        <latemp_license_text />
       </div>
     </div>
 
