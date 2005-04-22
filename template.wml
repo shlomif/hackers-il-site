@@ -2,6 +2,15 @@
 <set-var latemp_print_stylesheet_url="$(ROOT)/sinorca-print.css" />
 #include "latemp/latemp-main.wml"
 
+<latemp_top_left_corner_logo>
+      <div>
+<a href="$(ROOT)" class="nobg" title="Hackers-IL Logo"><img 
+   src="$(ROOT)/images/glider-israel.png" style="border:0;padding-right:0.5em;"
+   alt="The Hackers-IL Emblem" 
+   /></a>
+      </div>
+</latemp_top_left_corner_logo>
+
 <latemp_lang "en-US" />
 <latemp_encoding "utf-8" />
 <latemp_author "Hackers-IL" />
