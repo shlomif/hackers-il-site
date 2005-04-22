@@ -1,6 +1,6 @@
 #include '../template.wml'
 
-<subject "The Hackers-IL Wiki" />
+<latemp_subject "The Hackers-IL Wiki" />
 
 <p>
 We have <a href="/mediawiki/index.php/">a Wiki</a> where most of the site's

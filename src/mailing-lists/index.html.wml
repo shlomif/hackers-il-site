@@ -1,6 +1,6 @@
 #include '../template.wml'
 
-<subject "The Hackers-IL Mailing Lists" />
+<latemp_subject "The Hackers-IL Mailing Lists" />
 
 <p>
 Most of our interactive discussion takes place in 

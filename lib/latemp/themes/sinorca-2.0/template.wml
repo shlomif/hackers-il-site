@@ -1,20 +1,7 @@
 <latemp_init_h_w_navmenu />
 
 <latemp_html_header standard="xhtml1.0-strict" />
-<head>
-<title>{#SUBJECT_LOC#}</title>
-<link rel="stylesheet" type="text/css" href="$(ROOT)/sinorca-screen.css" media="screen" title="Sinorca (screen)" />
-<link rel="stylesheet" type="text/css" href="$(ROOT)/sinorca-print.css" media="print" />
-
-<:{
-use CGI qw();
-
-while (my ($key, $url) = each(%$nav_links))
-{
-    print "<link rel=\"$key\" href=\"" . CGI::escapeHTML($url) . "\" />\n"
-}
-}:>
-</head>
+<latemp_html_head_tag />
 <body>
 
 
@@ -60,7 +47,7 @@ http://developer.berlios.de/forum/forum.php?forum_id=2341
 
     <div id="header">
       <div class="midHeader">
-        <h1 class="headerTitle">{#SUBJECT_LOC#}</h1>
+        <h1 class="headerTitle">{#LATEMP_SUBJECT_LOC#}</h1>
       </div>
     </div>
 

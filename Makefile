@@ -30,7 +30,7 @@ LATEMP_WML_INCLUDE_PATH =$(shell latemp-config --wml-include-path)
 
 WML_FLAGS += --passoption=2,-X3074 --passoption=3,-I../lib/ --passoption=7,"-S imgsize" -DROOT~.
 
-WML_FLAGS += -DLATEMP_THEME=sinorca-2.0
+WML_FLAGS += -DLATEMP_THEME=sinorca-2.0 -DLATEMP_SERVER=hackers
 
 WML_FLAGS += -I$(LATEMP_WML_INCLUDE_PATH) -I../lib/
 
@@ -51,7 +51,7 @@ dest:
 	if [ ! -e $@ ] ; then mkdir $@ ; fi
 	
 $(DESTS) :: $(TARGET)/% : src/%.wml $(LIBRARY_FILES)
-	(cd src && wml $(WML_FLAGS) -DFILENAME=$(patsubst src/%.wml,%,$<) $(patsubst src/%,%,$<)) > $@
+	(cd src && wml $(WML_FLAGS) -DLATEMP_FILENAME=$(patsubst src/%.wml,%,$<) $(patsubst src/%,%,$<)) > $@
 
 $(RAW_FILES_DEST) :: $(TARGET)/% : src/%
 	cp -f $< $@

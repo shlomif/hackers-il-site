@@ -1,6 +1,6 @@
 #include '../template.wml'
 
-<subject "The Hackers-IL Homepage" />
+<latemp_subject "The Hackers-IL Homepage" />
 
 <p>
 Welcome to the homepage of Hackers-IL, a group of Israeli, or Israeli-oriented 
