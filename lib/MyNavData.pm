@@ -11,21 +11,21 @@ my $hosts =
 my $tree_contents =
 {
     'host' => "hackers",
-    'value' => "The Hackers-IL Homepage",
+    'text' => "The Hackers-IL Homepage",
     'title' => "Hackers-IL: Israeli Software Enthusiasts",
     'expand_re' => "",
     'subs' =>
     [
         {
-            'value' => "Home",
+            'text' => "Home",
             'url' => "",
         },
         {
-            'value' => "Wiki",
+            'text' => "Wiki",
             'url' => "wiki/",
         },
         {
-            'value' => "Mailing Lists",
+            'text' => "Mailing Lists",
             'url' => "mailing-lists/",
         },
     ],

@@ -1,54 +1,6 @@
-# #use wml::des::navbar
+<latemp_init_h_w_navmenu />
 
-<:{
-use MyNavData;
-use Shlomif::NavMenu;
-
-my $filename = "$(FILENAME)";
-$filename =~ s!index\.html$!!;
-$filename = "/$filename";
-
-my $nav_bar = Shlomif::NavMenu->new(
-    'path_info' => $filename,
-    'current_host' => "hackers",
-    MyNavData::get_params(),
-    );
-
-my $rendered_results = 
-        $nav_bar->render(
-            no_ie => 'true',
-            (0 ? (styles =>
-            {
-                'bar' => 'nav',
-                'level0' => 'navbarmain',
-                'level1' => 'navbarnested',
-                'level2' => "navbarnested",
-                'level3' => "navbarnested",
-                'level4' => "navbarnested",
-                'list' => "navbarmain",
-            }): ()),
-            );
-
-use vars qw($nav_links);
-
-$nav_links = $rendered_results->{nav_links};
-
-use vars qw($nav_html);
-
-$nav_html = $rendered_results->{html};
-
-}:>
-
-<define-tag email:link>
-<a href="mailto:%0">%0</a>
-</define-tag>
-
-# The Definition of the page itself
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html 
-     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<latemp_html_header standard="xhtml1.0-strict" />
 <head>
 <title>{#SUBJECT_LOC#}</title>
 <link rel="stylesheet" type="text/css" href="$(ROOT)/sinorca-screen.css" media="screen" title="Sinorca (screen)" />

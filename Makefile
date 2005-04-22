@@ -26,7 +26,13 @@ PODS_DESTS_PODS = $(patsubst %,$(TARGET)/%.pod,$(PODS))
 
 SUBDIRS_DEST = $(addprefix $(TARGET)/,$(SUBDIRS))
 
-WML_FLAGS += --passoption=2,-X --passoption=3,-I../lib/ --passoption=7,"-S imgsize" -DROOT~.
+LATEMP_WML_INCLUDE_PATH =$(shell latemp-config --wml-include-path)
+
+WML_FLAGS += --passoption=2,-X3074 --passoption=3,-I../lib/ --passoption=7,"-S imgsize" -DROOT~.
+
+WML_FLAGS += -DLATEMP_THEME=sinorca-2.0
+
+WML_FLAGS += -I$(LATEMP_WML_INCLUDE_PATH) -I../lib/
 
 RSYNC = rsync --progress --verbose --rsh=ssh 
 
