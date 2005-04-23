@@ -1,5 +1,6 @@
 <set-var latemp_screen_stylesheet_url="$(ROOT)/sinorca-screen.css" />
 <set-var latemp_print_stylesheet_url="$(ROOT)/sinorca-print.css" />
+<set-var latemp_with_xml_declaration="1" />
 #include "latemp/latemp-main.wml"
 
 <latemp_top_left_corner_logo>
