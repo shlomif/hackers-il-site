@@ -16,23 +16,19 @@ RAW_FILES = $(IMAGES)
 RAW_FILES_SOURCES = $(addprefix src/,$(RAW_FILES))
 RAW_FILES_DEST = $(addprefix $(TARGET)/,$(RAW_FILES))
 
-PODS = $(addprefix docs/,roadmap spec whitepaper version-0.2-spec)
-PODS_DESTS_HTMLS = $(patsubst %,$(TARGET)/%.html,$(PODS))
-PODS_DESTS_PODS = $(patsubst %,$(TARGET)/%.pod,$(PODS))
-
 # PACKAGES_DIR = $(TARGET)/download/arcs
 # PACKAGES = $(shell cd temp && cd lk-module-compiler-final && ls)
 # PACKAGES_DESTS = $(addprefix $(PACKAGES_DIR)/,$(PACKAGES))
 
 SUBDIRS_DEST = $(addprefix $(TARGET)/,$(SUBDIRS))
 
-LATEMP_WML_INCLUDE_PATH =$(shell latemp-config --wml-include-path)
+LATEMP_WML_INCLUDE_PATH =$(shell latemp-config --wml-flags)
 
 WML_FLAGS += --passoption=2,-X3074 --passoption=3,-I../lib/ --passoption=7,"-S imgsize" -DROOT~.
 
 WML_FLAGS += -DLATEMP_THEME=sinorca-2.0 -DLATEMP_SERVER=hackers
 
-WML_FLAGS += -I$(LATEMP_WML_INCLUDE_PATH) -I../lib/
+WML_FLAGS += $(LATEMP_WML_INCLUDE_PATH) -I../lib/
 
 RSYNC = rsync --progress --verbose --rsh=ssh 
 
@@ -58,14 +54,6 @@ $(RAW_FILES_DEST) :: $(TARGET)/% : src/%
 
 $(SUBDIRS_DEST) :: % : $(UNCHANGED_FILE)
 	if [ ! -e $@ ] ; then mkdir $@ ; fi
-
-
-
-$(PODS_DESTS) :: $(TARGET)/% : src/%
-	cp -f $< $@
-
-$(PODS_DESTS_HTMLS) :: $(TARGET)/%.html : src/%.pod
-	pod2html $< > $@
 
 # $(PACKAGES_DESTS) :: $(PACKAGES_DIR)/% : ./temp/lk-module-compiler-final/%
 # 	cp -f $< $@
