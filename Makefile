@@ -7,7 +7,6 @@ TARGET = dest
 
 include defs.mak
 
-
 SOURCES = $(addprefix src/,$(addsuffix .html.wml,$(PAGES)))
 
 DESTS = $(patsubst src/%.html.wml,$(TARGET)/%.html,$(SOURCES))
