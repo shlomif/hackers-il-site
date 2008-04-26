@@ -60,6 +60,6 @@ $(SUBDIRS_DEST) :: % : $(UNCHANGED_FILE)
 upload: upload_iglu
 
 upload_iglu: all
-	(cd dest && $(RSYNC) -r * shlomif@iglu.org.il:/iglu/Hackers-IL/html)
+	(cd dest && $(RSYNC) -r * hackers_il@ferrous.hexten.net:htdocs/)
 
 .PHONY:
