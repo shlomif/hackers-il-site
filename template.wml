@@ -7,9 +7,9 @@
 
 <latemp_top_left_corner_logo>
       <div>
-<a href="$(ROOT)" class="nobg" title="Hackers-IL Logo"><img 
+<a href="$(ROOT)" class="nobg" title="Hackers-IL Logo"><img
    src="$(ROOT)/images/glider-israel.png" style="border:0;padding-right:0.5em;"
-   alt="The Hackers-IL Emblem" 
+   alt="The Hackers-IL Emblem"
   /></a>
       </div>
 </latemp_top_left_corner_logo>
@@ -21,20 +21,20 @@
 
 <latemp_affiliations_buttons>
 <p>
-<a href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=70"><img 
-   style="margin-top:1em; border:0;" alt="Get Firefox!" 
-   title="Get Firefox! A safer, faster, better web-browser." 
+<a href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=70"><img
+   style="margin-top:1em; border:0;" alt="Get Firefox!"
+   title="Get Firefox! A safer, faster, better web-browser."
    src="$(ROOT)/images/get-firefox.gif" /></a>
 </p>
 <p>
-<a href="http://validator.w3.org/check/referer"><img 
-    style="border:0" src="$(ROOT)/images/valid-xhtml10.png" 
+<a href="http://validator.w3.org/check/referer"><img
+    style="border:0" src="$(ROOT)/images/valid-xhtml10.png"
          alt="Valid XHTML 1.0!"
          /></a>
 </p>
 <p>
  <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A//perl-begin.berlios.de/$(FILENAME)"><img style="border:0"
-       src="$(ROOT)/images/valid-css.png" 
+       src="$(ROOT)/images/valid-css.png"
        alt="Valid CSS!" /></a>
 </p>
 <p>
@@ -71,9 +71,9 @@ http://perl-begin.berlios.de/<get-var url />
 <define-tag wiki:link whitespace="delete">
 <preserve url />
 <set-var %attributes />
-<ifeq "<get-var url />" "" 
-    "<set-var url="/Main/HomePage" />" 
-    "<set-var url="/<get-var url />" />" 
+<ifeq "<get-var url />" ""
+    "<set-var url="/Main/HomePage" />"
+    "<set-var url="/<get-var url />" />"
     />
 <site:link url="Wiki/pmwiki/pmwiki.php" /><get-var url />
 <restore url />

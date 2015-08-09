@@ -2,7 +2,7 @@ package MyNavData;
 
 my $hosts =
 {
-    'hackers' => 
+    'hackers' =>
     {
         'base_url' => "http://www.hackers.org.il/",
     },
@@ -33,7 +33,7 @@ my $tree_contents =
 
 sub get_params
 {
-    return 
+    return
         (
             'hosts' => $hosts,
             'tree_contents' => $tree_contents,

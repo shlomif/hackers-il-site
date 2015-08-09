@@ -29,7 +29,7 @@ WML_FLAGS += -DLATEMP_THEME=sinorca-2.0 -DLATEMP_SERVER=hackers
 
 WML_FLAGS += $(LATEMP_WML_INCLUDE_PATH) -I../lib/
 
-RSYNC = rsync --progress --verbose --rsh=ssh 
+RSYNC = rsync --progress --verbose --rsh=ssh
 
 LIBRARY_FILES = template.wml lib/MyNavData.pm
 
@@ -44,7 +44,7 @@ $(UNCHANGED_FILE):
 
 dest:
 	if [ ! -e $@ ] ; then mkdir $@ ; fi
-	
+
 $(DESTS) :: $(TARGET)/% : src/%.wml $(LIBRARY_FILES)
 	(cd src && wml $(WML_FLAGS) -DLATEMP_FILENAME=$(patsubst src/%.wml,%,$<) $(patsubst src/%,%,$<)) > $@
 
