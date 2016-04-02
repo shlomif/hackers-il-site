@@ -91,7 +91,7 @@ acronym, .titleTip {
   font-weight: bold;
   margin: 0;
   padding: 0 0.75ex 0 0.5ex;
-}  
+}
 
 .subHeader a:hover {
   text-decoration: underline;
@@ -141,10 +141,10 @@ acronym, .titleTip {
   margin: 0;
 }
 
-#side-bar a, #side-bar b, .thisPage 
+#side-bar a, #side-bar b, .thisPage
 {
   display: block;
-  padding: 0.75em 1ex 0.75em 5mm;  
+  padding: 0.75em 1ex 0.75em 5mm;
 }
 
 .thisPage {
@@ -156,7 +156,7 @@ acronym, .titleTip {
 }
 
 #side-bar a:hover {
-  color: white;  
+  color: white;
   text-decoration: none;
 }
 
@@ -296,8 +296,8 @@ dd {
   text-decoration: none;
 }
 
-a.nobg:hover 
-{ 
-    background-color : transparent; 
+a.nobg:hover
+{
+    background-color : transparent;
 }
 
